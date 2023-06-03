@@ -48,9 +48,8 @@ def model_init(args):
         model.fc = nn.Linear(in_features=512, out_features=get_dataset_num_classes(args.dataset))
         return model
     if args.model == 'cnn':
-        # TODO: missing code here!
-        raise NotImplementedError
-    raise NotImplementedError
+       model = CNN(num_classes=get_dataset_num_classes(args.dataset))
+       return model
 
 
 def get_transforms(args):
